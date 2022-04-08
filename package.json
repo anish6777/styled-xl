@@ -1,0 +1,51 @@
+{
+  "name": "styled-xl",
+  "version": "0.0.1",
+  "description": "Library to create XLSX files with styles,conditional formatting,auto filter,formula etc",
+  "main": "dist/styled-xl.js",
+  "module": "dist/styled-xl.js",
+  "private": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anish6777/styled-xl.git"
+  },
+  "keywords": [
+    "xls",
+    "xlsx",
+    "style",
+    "xls",
+    "merge",
+    "excel",
+    "merge cells",
+    "styles",
+    "conditional formatting"
+  ],
+  "author": "Anish Antony",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anish6777/styled-xl/issues"
+  },
+  "homepage": "https://github.com/anish6777/styled-xl#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.7",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "peerDependencies": {
+    "jszip": "^3.7.1"
+  },
+  "dependencies": {
+    "jszip": "^3.7.1"
+  }
+}
