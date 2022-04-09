@@ -9,10 +9,15 @@ It has mainly four functions
 - createFromObjectArray - to convert object arrays directly to XLSX
 - createFromArray - to convert 2D arrays directly to XLSX
 
-# Codepen sample
+# Codepen samples
 
-[Sample 1 - createFromObjectArray](https://codepen.io/anish-antony/pen/zYpwpRv)
-[Sample 2 - createFromArray](https://codepen.io/anish-antony/pen/zYpwpRv)
+## Codepen sample 1
+
+[Sample 1 - createFromObjectArray](https://codepen.io/anish-antony/pen/popVZba)
+
+## Codepen sample 2
+
+[Sample 2 - createFromArray](https://codepen.io/anish-antony/pen/wvpjxrq)
 
 # Installation and Setup Instructions
 
@@ -21,8 +26,6 @@ It has mainly four functions
 # Creating XLSX file from object array
 
 We will see how we can create a XLSX file as below from an object array of shape [{"key1":"value1","key2":"value2"}]
-
-Final output of [Codepen sample](https://codepen.io/anish-antony/pen/zYpwpRv) will look as below
 
 ![alt text](https://i.ibb.co/ccTBHnt/styled-xls-sample1.jpg?raw=true)
 

@@ -54,7 +54,7 @@ function createSheetDataFromArray(
 
   conditionalFormattingXml += conditionalFormatXML;
   sheetDataXml += `</sheetData>`;
-  if (autoFilter) {
+  if (autoFilter && afRange) {
     autofilterRange = `A1:${getColumnNameFromIndex(
       afRange.numCols - 1,
       afRange.numRows

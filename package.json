@@ -1,6 +1,6 @@
 {
   "name": "styled-xl",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Library to create XLSX files with styles,conditional formatting,auto filter,formula etc",
   "main": "dist/styled-xl.js",
   "module": "dist/styled-xl.js",

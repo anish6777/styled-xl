@@ -68,7 +68,7 @@ function createRow(
       //rowSpanXMLs += `<row r="${r+i+1}" spans="1:1" x14ac:dyDescent="0.25"></row>`;
     }
   }
-  if (autoFilter && afRange.numCols < numCols) {
+  if (autoFilter && afRange && afRange.numCols < numCols) {
     afRange.numCols = numCols;
   }
   return (

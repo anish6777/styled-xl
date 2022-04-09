@@ -85,6 +85,8 @@ function createSheetDataFromObjectArray(
       lastRowStyleId || styleId,
       null,
       null,
+      null,
+      null,
       lastRow.rowSpan,
       mergedCells
     );
