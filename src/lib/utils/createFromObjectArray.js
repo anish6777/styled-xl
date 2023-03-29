@@ -2,6 +2,7 @@ import createWorkbookXML from "./createWorkbookXML";
 import createStyles from "./createStyles";
 import createSheetDataFromObjectArray from "./createSheetDataFromObjectArray";
 import { workbookXMLRels, contentTypes, rels } from "./constants";
+import jszip from 'jszip';
 
 function createFromObjectArray(
   title,
@@ -37,14 +38,14 @@ function createFromObjectArray(
   );
 
   const workbookXML = createWorkbookXML(title);
-  const zip = new JSZip();
+  const zip = new jszip();
   const xl = zip.folder("xl");
   xl.file("workbook.xml", workbookXML);
   xl.file("styles.xml", styleCreator.xml());
   xl.file("_rels/workbook.xml.rels", workbookXMLRels);
   zip.file("_rels/.rels", rels);
   zip.file("[Content_Types].xml", contentTypes);
-  xl.file("worksheets/Sheet1.xml", sheetXML);
+  xl.file("worksheets/sheet1.xml", sheetXML);
   return zip
     .generateAsync({
       type: "blob",
