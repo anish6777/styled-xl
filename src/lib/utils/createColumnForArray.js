@@ -36,6 +36,8 @@ function createColumnForArray(inp, addStyle, addConditionalStyle, numRows) {
     }
   }
   colsXml = colsXml === "<cols>" ? "" : colsXml + "</cols>";
+  console.log("ccA colsXml",colsXml)
+  console.log("ccA colsStyles",colsStyles)
 
   return { colsXml, colsStyles, conditionalFormatXML };
 }

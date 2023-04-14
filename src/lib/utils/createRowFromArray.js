@@ -17,6 +17,7 @@ function createRowFromArray(
       let cellId = "";
       let styleId = null;
       if (colsStyles && colsStyles[i]) {
+        console.log("cRFA i:",i," arr[i]:",arr[i]," colsStyles[i]:",colsStyles[i])
         styleId = colsStyles[i];
       }
       cellId = getColumnNameFromIndex(i, r);
