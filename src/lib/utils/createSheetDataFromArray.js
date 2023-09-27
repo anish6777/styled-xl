@@ -3,7 +3,9 @@ import createRow from "./createRow";
 import createMergedCellsXML from "./createMergedCellsXML";
 import createSheetXML from "./createSheetXML";
 import createColumnForArray from "./createColumnForArray";
+import createFreezePanesXML from "./createFreezePanesXML";
 import getColumnNameFromIndex from "./getColumnNameFromIndex";
+import getElementsFromColumnConfig2D from "./getElementsFromColumnConfig2D";
 
 function createSheetDataFromArray(
   elements,
@@ -13,7 +15,8 @@ function createSheetDataFromArray(
   addConditionalStyle,
   conditionalFormatRules,
   mergedCells,
-  autoFilter
+  autoFilter,
+  freezePanes
 ) {
   let conditionalFormattingXml = "";
   if (
@@ -40,9 +43,10 @@ function createSheetDataFromArray(
 
   let sheetDataXml = `<sheetData>`;
   for (let i = 0; i < elements.length; i++) {
+    const currentElements = getElementsFromColumnConfig2D(columnConfig,elements[i],i);
     sheetDataXml += createRow(
       i + 1,
-      elements[i],
+      currentElements,
       addStyle,
       styleId,
       colsStyles,
@@ -60,13 +64,15 @@ function createSheetDataFromArray(
       afRange.numRows
     )}`;
   }
+  const freezePanesXML = createFreezePanesXML(freezePanes);
   const mergedCellsXML = createMergedCellsXML(mergedCells);
   return createSheetXML(
     sheetDataXml,
     colsXml,
     conditionalFormattingXml,
     mergedCellsXML,
-    autofilterRange
+    autofilterRange,
+    freezePanesXML
   );
 }
 
