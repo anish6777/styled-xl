@@ -1,10 +1,10 @@
 function escapeChars(inp = "") {
   return inp
-    .replace("&", "&#38;")
-    .replace("<", "&#60;")
-    .replace(">", "&#62;")
-    .replace("'", "&#39;")
-    .replace('"', "&#34;");
+    .replaceAll("&", "&#38;")
+    .replaceAll("<", "&#60;")
+    .replaceAll(">", "&#62;")
+    .replaceAll("'", "&#39;")
+    .replaceAll('"', "&#34;");
 }
 
 export default escapeChars;
